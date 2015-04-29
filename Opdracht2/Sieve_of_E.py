@@ -59,3 +59,4 @@ primesfound = len(primes)
 print('Found ' + str(primesfound) + ' Prime numbers smaller than ' + str(number) + ' in ' + str(timetaken) +' sec.') 
 for x in range(0,len(primes)):
     file.write(str(primes[x])+ "\n")
+file.close()
