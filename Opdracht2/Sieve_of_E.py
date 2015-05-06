@@ -17,10 +17,11 @@ except:
     print('Bad input / unexpected error. Check arguments')
     print('Aborting...')
     sys.exit()
-if not '.dat' in str(sys.argv[2]):
-    print('Bad file specifier as 2nd argument')
-    print('Aborting...')
-    sys.exit()
+####################### commented out to allow other types of filename input
+#if not '.dat' in str(sys.argv[2]):
+#    print('Bad file specifier as 2nd argument')
+#    print('Aborting...')
+#    sys.exit()
 T1 = time.perf_counter()
 file = open(str(sys.argv[2]),'w')
 ######################################## Actual sieve part:
