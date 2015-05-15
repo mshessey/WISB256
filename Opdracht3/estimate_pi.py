@@ -41,10 +41,8 @@ if L <= 0.:
 ######################################### function declaration
 def drop_needle(L):
     x0 = random.random()
-    y0 = random.random()
     theta = random.uniform(0,2*math.pi)
     x1 = x0 + math.cos(theta) * L
-    y1 = y0 + math.sin(theta) * L
     #print(str(type(x1)))
     #print(str(type(y1)))
     if x1 < 0. or x1 > 1.:
