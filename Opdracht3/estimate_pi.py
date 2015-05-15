@@ -31,25 +31,17 @@ except:
     print('Unknown error with second argument')
     sys.exit()
 
-if L > 1.:
-    print('AssertionError: L should be less than or equal to 1')
-    sys.exit()
+#if L > 1.:
+   # print('AssertionError: L should be less than or equal to 1')
+   # sys.exit()
 if L <= 0.:
     print('AssertionError: L should be greater than 0')
     sys.exit()
- 
-debugcounterX = [0]
-debugcounterY = [0]
-warningcounter = [0]
 
 ######################################### function declaration
 def drop_needle(L):
     x0 = random.random()
     y0 = random.random()
-    if abs(x0-y0)<0.01:
-        #print('Warning, x0 close to y0')
-        warningcounter[0] = warningcounter[0] + 1
-    #theta = random.vonmisesvariate(0,0)
     theta = random.uniform(0,2*math.pi)
     x1 = x0 + math.cos(theta) * L
     y1 = y0 + math.sin(theta) * L
@@ -77,14 +69,13 @@ for i in range(0,int(N)):
     if drop_needle(L):
         hits += 1
 
-print('Warningcounter: '+str(warningcounter))
-print('DebugcounterX: '+str(debugcounterX)+'DebugcounterY: '+str(debugcounterY)+' Hits: '+str(hits))
-#Pinv = N / hits
-P = float(hits) / float(N)
-#print('Pinv: '+str(Pinv))
-print('P: '+str(P))
-#pi = 2*L*Pinv
-print(hits)
-pi = 2*L / P
+if L < 1:
+    P = float(hits) / float(N)
+    pi = 2*L / P
+elif L >= 1:
+    P = float(hits) / float(N)
+    upper = 2*L - 2*(math.sqrt(L**2-1)+math.asin(1/L))
+    lower = P-1
+    pi = upper /lower
 print(str(int(hits)) + ' hits in ' +str(N)+' tries')
-print('pi = '+str(pi))
+print('Pi = '+str(pi))
