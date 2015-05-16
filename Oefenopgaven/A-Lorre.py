@@ -1,5 +1,5 @@
 while True:
-    lines = input('How many lines? ')
+    lines = input()
     try:
         lines = int(lines)
         break
@@ -8,7 +8,7 @@ while True:
 
 for n in range (0,lines):
     while True:
-        words = input('Say something ')
+        words = input()
         try:
             str(words)
             break
