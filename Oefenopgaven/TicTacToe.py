@@ -67,9 +67,9 @@ def findwinner():
 output = 'No winner'
 
 if findwinner()=='1':
-    output = 'Player 1 Wins'
+    output = 'Player 1 wins'
     
 if findwinner()=='2':
-    output = 'Player 2 Wins'
+    output = 'Player 2 wins'
     
 print(output)
