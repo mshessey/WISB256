@@ -13,7 +13,7 @@ while True:
                 break
             for sign in ops:
                 if words[i] == sign:
-                    words[i] = ops[words[i]](int(words[i-2]),int(words[i-1]))
+                    words[i] = ops[words[i]](float(words[i-2]),float(words[i-1]))
                     words.pop(i-2)
                     words.pop(i-2)
                     alreadyfound = True
