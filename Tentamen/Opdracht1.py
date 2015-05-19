@@ -12,7 +12,7 @@ if cijfer:
     words = 'Ug'
     for i in range(1,taal):
         words = words+' ug'
-    words = words+' !'
+    words = words+'!'
     print(words)
     
 else:
