@@ -127,3 +127,10 @@ def findAllroots(f,a,b,epsilon):
     outlist = []
     outlist = findallrootinner(f,a,b,epsilon,outlist)
     return outlist
+    
+    
+def findRoot(f,a,b,epsilon):
+    return findAllroots(f,a,b,epsilon)
+    
+def findAllRoots(f,a,b,epsilon):
+    return findAllroots(f,a,b,epsilon)
