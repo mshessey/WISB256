@@ -112,7 +112,7 @@ def findallrootinner(f,a,b,epsilon,outlist):
     root = findroot(f,a,b,epsilon)
     if root == False:
         #print("Finished Looking for roots")
-        print(outlist)
+        #print(outlist)
         #print('The END!')
         return outlist
     else:
@@ -130,7 +130,7 @@ def findAllroots(f,a,b,epsilon):
     
     
 def findRoot(f,a,b,epsilon):
-    return findAllroots(f,a,b,epsilon)
+    return findroot(f,a,b,epsilon)
     
 def findAllRoots(f,a,b,epsilon):
     return findAllroots(f,a,b,epsilon)
